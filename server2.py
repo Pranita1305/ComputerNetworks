@@ -21,6 +21,7 @@ def handle_client(conn, addr):
         data_rev = ""
         for i in range(len(data) - 1, -1, -1):
             data_rev += data[i]
+        print (" from client: " + str(data))
         conn.send(data_rev.encode())
     conn.close()
 
